@@ -1,19 +1,19 @@
 /* Root Variables for Easy Theme Management */
 :root {
-    --primary-bg: linear-gradient(to bottom right, #FF6B6B, #FFD93D, #4ECDC4);
+    --primary-bg: linear-gradient(to bottom right, #FF8C00, #FFD93D, #FF6347);
     --highlight-color: #FFFFFF;
-    --container-bg: rgba(0, 0, 0, 0.7);
-    --text-shadow: 1px 1px 5px #000;
+    --container-bg: rgba(255, 255, 255, 0.9);
+    --text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     --confetti-opacity: 0.7;
     --border-radius: 15px;
-    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    --box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Universal Styles */
 body {
-    font-family: 'Monospace', sans-serif;
+    font-family: 'Arial', sans-serif;
     background: var(--primary-bg);
-    color: var(--highlight-color); /* Text color changed to white for better contrast */
+    color: var(--highlight-color);
     text-align: center;
     padding: 20px;
     margin: 0;
@@ -38,6 +38,7 @@ header {
 h1 {
     font-size: 2.5em;
     margin: 0;
+    color: #FF6347; /* Birthday color */
     animation: slideIn 1s ease-out; /* Slide-in effect */
 }
 
@@ -47,10 +48,10 @@ h1 {
 }
 
 .banner {
-    max-width: 50%; /* Adjust the percentage to make it smaller */
-    height: auto;  /* Ensures the aspect ratio is maintained */
+    max-width: 100%; /* Full width on mobile */
+    height: auto;  /* Maintains aspect ratio */
     border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--box-shadow);
     animation: zoomIn 1.5s ease; /* Zoom-in effect */
 }
 
@@ -61,7 +62,7 @@ h1 {
 
 section {
     width: 100%; /* Full width */
-    max-width: 800px; /* Max width to prevent over-stretching */
+    max-width: 800px; /* Prevent over-stretching */
     padding: 20px;
     margin: 20px 0;
     background-color: var(--container-bg);
@@ -70,32 +71,29 @@ section {
     animation: fadeIn 2s ease-in; /* Fade-in effect */
 }
 
+h2 {
+    color: #FF8C00; /* Section title color */
+    margin-top: 0;
+}
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
     justify-content: center;
 }
 
 .memory-image {
-    width: 150px;
-    height: 150px;
+    width: 200px; /* Increased image size */
+    height: 200px;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    animation: bounce 2s infinite; /* Bounce effect */
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s;
 }
 
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
+.memory-image:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
 }
 
 footer {
@@ -136,8 +134,8 @@ footer {
         font-size: 2em;
     }
     .memory-image {
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
     }
 }
 
@@ -146,7 +144,7 @@ footer {
         font-size: 1.5em;
     }
     .memory-image {
-        width: 75px;
-        height: 75px;
+        width: 100px;
+        height: 100px;
     }
 }
