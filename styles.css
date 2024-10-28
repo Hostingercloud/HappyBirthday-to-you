@@ -15,7 +15,7 @@ body {
     background: var(--primary-bg);
     color: var(--highlight-color); /* Text color changed to white for better contrast */
     text-align: center;
-    padding: 10px; /* Reduced padding for better mobile spacing */
+    padding: 20px;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -32,11 +32,11 @@ body {
 }
 
 header {
-    margin-bottom: 10px; /* Reduced margin */
+    margin-bottom: 20px;
 }
 
 h1 {
-    font-size: 6vw; /* Responsive font size */
+    font-size: 2.5em;
     margin: 0;
     animation: slideIn 1s ease-out; /* Slide-in effect */
 }
@@ -47,7 +47,7 @@ h1 {
 }
 
 .banner {
-    max-width: 90%; /* Increased for better mobile viewing */
+    max-width: 50%; /* Adjust the percentage to make it smaller */
     height: auto;  /* Ensures the aspect ratio is maintained */
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -62,8 +62,8 @@ h1 {
 section {
     width: 100%; /* Full width */
     max-width: 800px; /* Max width to prevent over-stretching */
-    padding: 15px; /* Adjusted padding */
-    margin: 15px 0; /* Adjusted margins */
+    padding: 20px;
+    margin: 20px 0;
     background-color: var(--container-bg);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
@@ -78,9 +78,8 @@ section {
 }
 
 .memory-image {
-    width: 20vw; /* Use responsive width */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 150px; /* Cap max size for larger screens */
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
@@ -134,20 +133,20 @@ footer {
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     h1 {
-        font-size: 8vw; /* Larger text for tablets */
+        font-size: 2em;
     }
     .memory-image {
-        width: 25vw; /* Responsive image size */
-        max-width: 100px; /* Ensure it doesn't get too big */
+        width: 100px;
+        height: 100px;
     }
 }
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 10vw; /* Adjust font size for small phones */
+        font-size: 1.5em;
     }
     .memory-image {
-        width: 30vw; /* Responsive image size */
-        max-width: 75px; /* Ensure it doesn't get too big */
+        width: 75px;
+        height: 75px;
     }
 }
