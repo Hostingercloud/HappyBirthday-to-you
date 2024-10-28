@@ -1,21 +1,21 @@
 /* Root Variables for Easy Theme Management */
 :root {
-    --primary-bg: linear-gradient(to bottom right, #FF8C00, #FFD93D, #FF6347);
+    --primary-bg: linear-gradient(to bottom right, #FF6B6B, #FFD93D, #4ECDC4);
     --highlight-color: #FFFFFF;
-    --container-bg: rgba(255, 255, 255, 0.9);
-    --text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    --container-bg: rgba(0, 0, 0, 0.7);
+    --text-shadow: 1px 1px 5px #000;
     --confetti-opacity: 0.7;
     --border-radius: 15px;
-    --box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Universal Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Monospace', sans-serif;
     background: var(--primary-bg);
-    color: var(--highlight-color);
+    color: var(--highlight-color); /* Text color changed to white for better contrast */
     text-align: center;
-    padding: 20px;
+    padding: 10px; /* Reduced padding for better mobile spacing */
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -32,13 +32,12 @@ body {
 }
 
 header {
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Reduced margin */
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 6vw; /* Responsive font size */
     margin: 0;
-    color: #FF6347; /* Birthday color */
     animation: slideIn 1s ease-out; /* Slide-in effect */
 }
 
@@ -48,10 +47,10 @@ h1 {
 }
 
 .banner {
-    max-width: 100%; /* Full width on mobile */
-    height: auto;  /* Maintains aspect ratio */
+    max-width: 90%; /* Increased for better mobile viewing */
+    height: auto;  /* Ensures the aspect ratio is maintained */
     border-radius: 15px;
-    box-shadow: var(--box-shadow);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     animation: zoomIn 1.5s ease; /* Zoom-in effect */
 }
 
@@ -62,38 +61,42 @@ h1 {
 
 section {
     width: 100%; /* Full width */
-    max-width: 800px; /* Prevent over-stretching */
-    padding: 20px;
-    margin: 20px 0;
+    max-width: 800px; /* Max width to prevent over-stretching */
+    padding: 15px; /* Adjusted padding */
+    margin: 15px 0; /* Adjusted margins */
     background-color: var(--container-bg);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     animation: fadeIn 2s ease-in; /* Fade-in effect */
 }
 
-h2 {
-    color: #FF8C00; /* Section title color */
-    margin-top: 0;
-}
-
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 10px;
     justify-content: center;
 }
 
 .memory-image {
-    width: 200px; /* Increased image size */
-    height: 200px;
+    width: 20vw; /* Use responsive width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 150px; /* Cap max size for larger screens */
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: var(--box-shadow);
-    transition: transform 0.3s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    animation: bounce 2s infinite; /* Bounce effect */
 }
 
-.memory-image:hover {
-    transform: scale(1.05); /* Zoom effect on hover */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
 }
 
 footer {
@@ -131,20 +134,20 @@ footer {
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2em;
+        font-size: 8vw; /* Larger text for tablets */
     }
     .memory-image {
-        width: 150px;
-        height: 150px;
+        width: 25vw; /* Responsive image size */
+        max-width: 100px; /* Ensure it doesn't get too big */
     }
 }
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 1.5em;
+        font-size: 10vw; /* Adjust font size for small phones */
     }
     .memory-image {
-        width: 100px;
-        height: 100px;
+        width: 30vw; /* Responsive image size */
+        max-width: 75px; /* Ensure it doesn't get too big */
     }
 }
