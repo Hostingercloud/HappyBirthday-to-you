@@ -1,19 +1,19 @@
 /* Root Variables for Easy Theme Management */
 :root {
-    --primary-bg: linear-gradient(to bottom right, #FF6B6B, #FFD93D, #4ECDC4);
-    --highlight-color: #FFFFFF;
-    --container-bg: rgba(0, 0, 0, 0.7);
-    --text-shadow: 1px 1px 5px #000;
-    --confetti-opacity: 0.7;
-    --border-radius: 15px;
-    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    --primary-bg: linear-gradient(to bottom right, #3D1A6D, #1B0B30, #4E0B51); /* Dark purple gradient */
+    --highlight-color: #EAE7DC; /* Light cream for text */
+    --container-bg: rgba(45, 45, 45, 0.8); /* Slightly opaque dark gray for containers */
+    --text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.3);
+    --confetti-opacity: 0.9; /* Higher opacity for confetti */
+    --border-radius: 20px;
+    --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Universal Styles */
 body {
-    font-family: 'Monospace', sans-serif;
+    font-family: 'Lobster', cursive; /* Elegant font for a festive touch */
     background: var(--primary-bg);
-    color: var(--highlight-color); /* Text color changed to white for better contrast */
+    color: var(--highlight-color); /* Text color for better contrast */
     text-align: center;
     padding: 20px;
     margin: 0;
@@ -23,7 +23,7 @@ body {
     align-items: center;
     overflow-x: hidden; /* Prevent horizontal scrolling */
     scroll-behavior: smooth; /* Smooth scrolling */
-    animation: fadeIn 2s ease-in; /* Fade-in effect */
+    animation: fadeIn 1.5s ease-in; /* Fade-in effect */
 }
 
 @keyframes fadeIn {
@@ -36,9 +36,10 @@ header {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 3em; /* Increased font size */
     margin: 0;
     animation: slideIn 1s ease-out; /* Slide-in effect */
+    text-shadow: var(--text-shadow); /* Added text shadow for better readability */
 }
 
 @keyframes slideIn {
@@ -47,10 +48,10 @@ h1 {
 }
 
 .banner {
-    max-width: 50%; /* Adjust the percentage to make it smaller */
-    height: auto;  /* Ensures the aspect ratio is maintained */
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 40%; /* Adjusted to make the banner smaller */
+    height: auto; /* Ensures the aspect ratio is maintained */
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
     animation: zoomIn 1.5s ease; /* Zoom-in effect */
 }
 
@@ -73,16 +74,16 @@ section {
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px; /* Increased gap for better spacing */
     justify-content: center;
 }
 
 .memory-image {
-    width: 150px;
-    height: 150px;
+    width: 180px; /* Adjusted size for larger images */
+    height: 180px;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
     animation: bounce 2s infinite; /* Bounce effect */
 }
 
@@ -102,6 +103,7 @@ footer {
     margin-top: 20px;
     width: 100%;
     text-align: center;
+    font-size: 1.2em; /* Slightly larger footer text */
 }
 
 /* Confetti Styles */
@@ -116,9 +118,9 @@ footer {
 
 .confetti {
     position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: #FFD700;
+    width: 12px; /* Slightly larger confetti */
+    height: 12px;
+    background-color: #FFD700; /* Gold confetti */
     opacity: var(--confetti-opacity);
     border-radius: 50%;
     animation: confettiFall linear infinite;
@@ -133,20 +135,20 @@ footer {
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2em;
+        font-size: 2.5em; /* Adjust font size for tablets */
     }
     .memory-image {
-        width: 100px;
-        height: 100px;
+        width: 130px; /* Adjust size for tablets */
+        height: 130px;
     }
 }
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 1.5em;
+        font-size: 2em; /* Adjust font size for mobile */
     }
     .memory-image {
-        width: 75px;
-        height: 75px;
+        width: 100px; /* Adjust size for mobile */
+        height: 100px;
     }
 }
